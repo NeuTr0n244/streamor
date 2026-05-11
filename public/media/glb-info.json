@@ -1,9 +1,9 @@
 {
-  "fileSize": 272903836,
-  "totalLength": 272903836,
+  "fileSize": 267839924,
+  "totalLength": 267839924,
   "numNodes": 335,
   "numMeshes": 212,
-  "numMaterials": 72,
+  "numMaterials": 73,
   "numCameras": 2,
   "numLights": 1,
   "cameras": [
@@ -98,27 +98,27 @@
         "type": "perspective"
       },
       "worldMatrix": [
-        0.6854237507234027,
-        -0.002902377677197032,
-        0.7281386633015774,
+        0.7505851741248641,
+        -0.0029023767752094365,
+        0.6607673453472531,
         0,
-        0.10752880365979522,
-        0.9894315313221012,
-        -0.09727693997917997,
+        0.0979489153767461,
+        0.9894315299425936,
+        -0.10691706151977964,
         0,
-        -0.7201610189216592,
-        0.14497180026487455,
-        0.678491960165164,
+        -0.6534737320234993,
+        0.14497180510899366,
+        0.7429369217729959,
         0,
-        -6.145717144012451,
+        -5.6978678703308105,
         4.38136625289917,
-        2.3374814987182617,
+        2.7194361686706543,
         1
       ],
       "worldPosition": [
-        -6.145717144012451,
+        -5.6978678703308105,
         4.38136625289917,
-        2.3374814987182617
+        2.7194361686706543
       ]
     }
   ],
@@ -142,7 +142,7 @@
         "name": "Spot.002"
       },
       "worldPosition": [
-        0.18853817880153656,
+        -0.1675264686346054,
         6.474637031555176,
         -3.38808012008667
       ]
@@ -223,11 +223,20 @@
       ]
     },
     {
-      "name": "Material.080",
+      "name": "Materiais",
       "emissiveFactor": [
         1,
         1,
         1
+      ],
+      "emissiveStrength": 1.4999998807907104
+    },
+    {
+      "name": "Materiais.001",
+      "emissiveFactor": [
+        0.6999999284744263,
+        0.6999999284744263,
+        0.6999999284744263
       ]
     },
     {
@@ -241,20 +250,40 @@
   ],
   "suspiciousNodes": [
     {
-      "i": 330,
-      "name": "Light_Top_KeyFocus"
+      "nodeIndex": 330,
+      "name": "Light_Top_KeyFocus",
+      "worldPosition": [
+        -0.1675264686346054,
+        6.474637031555176,
+        -3.38808012008667
+      ]
     },
     {
-      "i": 331,
-      "name": "Spotlight_Target_Top"
+      "nodeIndex": 331,
+      "name": "Spotlight_Target_Top",
+      "worldPosition": [
+        0.12201009690761566,
+        2.964024066925049,
+        -3.4768786430358887
+      ]
     },
     {
-      "i": 332,
-      "name": "Light_Face_Fill"
+      "nodeIndex": 332,
+      "name": "Light_Face_Fill",
+      "worldPosition": [
+        0.12201009690761566,
+        2.8640241622924805,
+        -4.672060966491699
+      ]
     },
     {
-      "i": 333,
-      "name": "Spotlight_Target_Face"
+      "nodeIndex": 333,
+      "name": "Spotlight_Target_Face",
+      "worldPosition": [
+        0.12201009690761566,
+        2.964024066925049,
+        -3.4768786430358887
+      ]
     }
   ],
   "animations": [
@@ -263,7 +292,7 @@
       "name": "ArmatureAction",
       "channels": 126,
       "samplers": 126,
-      "duration": 7.375,
+      "duration": 9.458333333333334,
       "targetPaths": [
         "translation",
         "rotation",
@@ -272,10 +301,58 @@
     },
     {
       "index": 1,
+      "name": "Cube.022_02.003_0Action",
+      "channels": 3,
+      "samplers": 3,
+      "duration": 8.958333333333334,
+      "targetPaths": [
+        "translation",
+        "rotation",
+        "scale"
+      ]
+    },
+    {
+      "index": 2,
+      "name": "Cube.022_B1_0Action",
+      "channels": 3,
+      "samplers": 3,
+      "duration": 8.958333333333334,
+      "targetPaths": [
+        "translation",
+        "rotation",
+        "scale"
+      ]
+    },
+    {
+      "index": 3,
+      "name": "Cube.022_Material.030_0Action",
+      "channels": 3,
+      "samplers": 3,
+      "duration": 8.958333333333334,
+      "targetPaths": [
+        "translation",
+        "rotation",
+        "scale"
+      ]
+    },
+    {
+      "index": 4,
+      "name": "Cube.022_Material.036_0Action",
+      "channels": 3,
+      "samplers": 3,
+      "duration": 8.958333333333334,
+      "targetPaths": [
+        "translation",
+        "rotation",
+        "scale"
+      ]
+    },
+    {
+      "index": 5,
       "name": "CâmeraAction",
       "channels": 3,
       "samplers": 3,
-      "duration": 4.083333333333333,
+      "duration": 4.833333333333333,
       "targetPaths": [
         "translation",
         "rotation",
@@ -283,7 +360,7 @@
       ]
     }
   ],
-  "numAnimations": 2,
+  "numAnimations": 6,
   "extensionsUsed": [
     "KHR_materials_emissive_strength",
     "KHR_lights_punctual"

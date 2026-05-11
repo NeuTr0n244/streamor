@@ -116,9 +116,14 @@ const emissiveMaterials = materials.filter((m) => {
 }));
 
 // List ALL node names that contain "light", "luz", "lamp", or "key" — case insensitive
+// Also dump their world positions so we can verify Light_Face_Fill is sane.
 const suspiciousNodes = nodes
   .map((n, i) => ({ i, name: n.name }))
-  .filter(({ name }) => name && /light|luz|lamp|key|fill|rim|front|frente/i.test(name));
+  .filter(({ name }) => name && /light|luz|lamp|key|fill|rim|front|frente|target|spot/i.test(name))
+  .map(({ i, name }) => {
+    const m = worldMatrix(i);
+    return { nodeIndex: i, name, worldPosition: [m[12], m[13], m[14]] };
+  });
 
 // Animations
 const animations = (json.animations ?? []).map((a, i) => {

@@ -221,9 +221,24 @@ async function initThree() {
   // and rebuild a SpotLight matching the same color/intensity profile as
   // the surviving key light so the look is coherent.
   // ---------------------------------------------------------------------
+  // Resolve fill position. The Draco compression step prunes "empty" nodes,
+  // and Light_Face_Fill is empty (Blender's Area light didn't export). So
+  // in the compressed GLB the node is gone — fall back to the position we
+  // captured from the uncompressed source via scripts/inspect-glb.mjs.
   const faceFillNode = gltf.scene.getObjectByName('Light_Face_Fill');
   const faceFillTarget = gltf.scene.getObjectByName('Spotlight_Target_Face');
+  let fillPos, fillTarget;
   if (faceFillNode && faceFillTarget) {
+    fillPos = faceFillNode.getWorldPosition(new THREE.Vector3());
+    fillTarget = faceFillTarget.getWorldPosition(new THREE.Vector3());
+    console.log('Light_Face_Fill: using node positions from GLB');
+  } else {
+    fillPos = new THREE.Vector3(0.12, 2.86, -4.67);
+    fillTarget = new THREE.Vector3(0.12, 2.96, -3.48);
+    console.log('Light_Face_Fill: nodes pruned, using hardcoded source positions');
+  }
+
+  {
     const keyLight = glbLights.find((l) => l.name === 'Light_Top_KeyFocus') || glbLights[0];
     const refColor = keyLight ? keyLight.color.clone() : new THREE.Color(0xffe5cc);
     const refBase = keyLight ? keyLight.userData.baseIntensity : 60000;
@@ -234,24 +249,17 @@ async function initThree() {
     fill.userData.baseIntensity = refBase * 0.18;
     fill.intensity = fill.userData.baseIntensity * LIGHT_SCALE;
 
-    const worldPos = new THREE.Vector3();
-    faceFillNode.getWorldPosition(worldPos);
-    const targetPos = new THREE.Vector3();
-    faceFillTarget.getWorldPosition(targetPos);
-
     scene.add(fill);
     scene.add(fill.target);
-    fill.position.copy(worldPos);
-    fill.target.position.copy(targetPos);
+    fill.position.copy(fillPos);
+    fill.target.position.copy(fillTarget);
 
     fill.castShadow = true;
     fill.shadow.mapSize.set(1024, 1024);
     fill.shadow.bias = -0.0005;
 
     glbLights.push(fill);
-    console.log(`reconstructed Light_Face_Fill at ${worldPos.toArray().map(n => n.toFixed(2))} → ${targetPos.toArray().map(n => n.toFixed(2))}`);
-  } else {
-    console.log('no Light_Face_Fill node found — skipping reconstruction');
+    console.log(`reconstructed Light_Face_Fill at ${fillPos.toArray().map(n => n.toFixed(2))} → ${fillTarget.toArray().map(n => n.toFixed(2))}`);
   }
 
   const cameras = gltf.cameras ?? [];
