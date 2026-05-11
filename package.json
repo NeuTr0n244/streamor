@@ -7,8 +7,10 @@
     "convert": "node scripts/convert-video.mjs",
     "inspect": "node scripts/inspect-glb.mjs",
     "detect-zoom": "node scripts/detect-zoom.mjs",
-    "build": "npm run convert && npm run inspect && npm run detect-zoom",
-    "serve": "node scripts/server.mjs"
+    "compress-glb": "node scripts/compress-glb.mjs",
+    "prepare-assets": "npm run convert && npm run compress-glb",
+    "serve": "node scripts/server.mjs",
+    "vercel-build": "echo 'static deploy — no build step'"
   },
   "dependencies": {
     "ffmpeg-static": "^5.2.0",
