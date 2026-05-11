@@ -1,0 +1,17 @@
+{
+  "name": "streamer-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "convert": "node scripts/convert-video.mjs",
+    "inspect": "node scripts/inspect-glb.mjs",
+    "detect-zoom": "node scripts/detect-zoom.mjs",
+    "build": "npm run convert && npm run inspect && npm run detect-zoom",
+    "serve": "node scripts/server.mjs"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.2.0",
+    "ffprobe-static": "^3.1.0"
+  }
+}

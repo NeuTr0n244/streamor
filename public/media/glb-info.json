@@ -1,0 +1,294 @@
+{
+  "fileSize": 272903836,
+  "totalLength": 272903836,
+  "numNodes": 335,
+  "numMeshes": 212,
+  "numMaterials": 72,
+  "numCameras": 2,
+  "numLights": 1,
+  "cameras": [
+    {
+      "name": "Camera",
+      "perspective": {
+        "aspectRatio": 1.7777777777777777,
+        "yfov": 1.2467066490894467,
+        "zfar": 100,
+        "znear": 0.10000000149011612
+      },
+      "type": "perspective"
+    },
+    {
+      "name": "Câmera",
+      "perspective": {
+        "aspectRatio": 1.7777777777777777,
+        "yfov": 0.5913156291788728,
+        "zfar": 1000,
+        "znear": 0.10000000149011612
+      },
+      "type": "perspective"
+    }
+  ],
+  "lights": [
+    {
+      "color": [
+        1,
+        0.949999988079071,
+        0.8799999952316284
+      ],
+      "intensity": 81527.1195988234,
+      "spot": {
+        "innerConeAngle": 0.2094395020659814,
+        "outerConeAngle": 0.3490658402442932
+      },
+      "type": "spot",
+      "name": "Spot.002"
+    }
+  ],
+  "cameraNodes": [
+    {
+      "nodeIndex": 0,
+      "name": "Camera",
+      "cameraIndex": 0,
+      "camera": {
+        "name": "Camera",
+        "perspective": {
+          "aspectRatio": 1.7777777777777777,
+          "yfov": 1.2467066490894467,
+          "zfar": 100,
+          "znear": 0.10000000149011612
+        },
+        "type": "perspective"
+      },
+      "worldMatrix": [
+        -0.987317289215123,
+        0.004154591555446188,
+        -0.1587054738822284,
+        0,
+        -0.0059722561288601955,
+        0.9979780143670863,
+        0.0632788678499039,
+        0,
+        0.15864747154589814,
+        0.06342414625867442,
+        -0.985296135676005,
+        0,
+        0.24346472322940826,
+        3.109480619430542,
+        -4.904460906982422,
+        1
+      ],
+      "worldPosition": [
+        0.24346472322940826,
+        3.109480619430542,
+        -4.904460906982422
+      ]
+    },
+    {
+      "nodeIndex": 334,
+      "name": "Câmera",
+      "cameraIndex": 1,
+      "camera": {
+        "name": "Câmera",
+        "perspective": {
+          "aspectRatio": 1.7777777777777777,
+          "yfov": 0.5913156291788728,
+          "zfar": 1000,
+          "znear": 0.10000000149011612
+        },
+        "type": "perspective"
+      },
+      "worldMatrix": [
+        0.6854237507234027,
+        -0.002902377677197032,
+        0.7281386633015774,
+        0,
+        0.10752880365979522,
+        0.9894315313221012,
+        -0.09727693997917997,
+        0,
+        -0.7201610189216592,
+        0.14497180026487455,
+        0.678491960165164,
+        0,
+        -6.145717144012451,
+        4.38136625289917,
+        2.3374814987182617,
+        1
+      ],
+      "worldPosition": [
+        -6.145717144012451,
+        4.38136625289917,
+        2.3374814987182617
+      ]
+    }
+  ],
+  "lightNodes": [
+    {
+      "nodeIndex": 330,
+      "name": "Light_Top_KeyFocus",
+      "lightIndex": 0,
+      "light": {
+        "color": [
+          1,
+          0.949999988079071,
+          0.8799999952316284
+        ],
+        "intensity": 81527.1195988234,
+        "spot": {
+          "innerConeAngle": 0.2094395020659814,
+          "outerConeAngle": 0.3490658402442932
+        },
+        "type": "spot",
+        "name": "Spot.002"
+      },
+      "worldPosition": [
+        0.18853817880153656,
+        6.474637031555176,
+        -3.38808012008667
+      ]
+    }
+  ],
+  "emissiveMaterials": [
+    {
+      "name": "01.001",
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "NO.003_0",
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "NO.003_1",
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ],
+      "emissiveStrength": 3
+    },
+    {
+      "name": "Material.041_0",
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Material.080_0",
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Material.094",
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Material.041",
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Material.022_11",
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Material.022_7",
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Material.080",
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "NO.003",
+      "emissiveFactor": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "suspiciousNodes": [
+    {
+      "i": 330,
+      "name": "Light_Top_KeyFocus"
+    },
+    {
+      "i": 331,
+      "name": "Spotlight_Target_Top"
+    },
+    {
+      "i": 332,
+      "name": "Light_Face_Fill"
+    },
+    {
+      "i": 333,
+      "name": "Spotlight_Target_Face"
+    }
+  ],
+  "animations": [
+    {
+      "index": 0,
+      "name": "ArmatureAction",
+      "channels": 126,
+      "samplers": 126,
+      "duration": 7.375,
+      "targetPaths": [
+        "translation",
+        "rotation",
+        "scale"
+      ]
+    },
+    {
+      "index": 1,
+      "name": "CâmeraAction",
+      "channels": 3,
+      "samplers": 3,
+      "duration": 4.083333333333333,
+      "targetPaths": [
+        "translation",
+        "rotation",
+        "scale"
+      ]
+    }
+  ],
+  "numAnimations": 2,
+  "extensionsUsed": [
+    "KHR_materials_emissive_strength",
+    "KHR_lights_punctual"
+  ],
+  "extensionsRequired": [
+    "KHR_lights_punctual"
+  ]
+}

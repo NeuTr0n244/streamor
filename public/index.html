@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>STREAMER</title>
+<link rel="stylesheet" href="/styles.css" />
+<link rel="preload" href="/media/intro.mp4" as="video" type="video/mp4" />
+  <link rel="preload" href="/media/zoom.mp4"  as="video" type="video/mp4" />
+</head>
+<body>
+  <main id="stage">
+    <video
+      id="intro"
+      class="layer"
+      src="/media/intro.mp4"
+      muted
+      playsinline
+      preload="auto"></video>
+
+    <video
+      id="zoom"
+      class="layer hidden"
+      src="/media/zoom.mp4"
+      muted
+      playsinline
+      preload="auto"></video>
+
+    <canvas id="three" class="layer hidden"></canvas>
+
+    <div id="hud" class="hidden" aria-hidden="true">
+      <button id="enter" type="button">
+        <span class="label">enter</span>
+        <span class="arrow">→</span>
+      </button>
+    </div>
+
+    <div id="ca-banner" aria-label="contract address">CA: <span class="value">SOON</span></div>
+
+    <button id="about-btn" type="button" aria-label="open about">
+      <span class="dot"></span><span>about</span>
+    </button>
+
+    <aside id="about-panel" aria-hidden="true">
+      <button class="close" type="button" aria-label="close">✕</button>
+      <div class="eyebrow">— about</div>
+      <h1>damage.</h1>
+      <div class="rule"></div>
+      <p>streamer, creator and developer. this corner is where it all happens — code, lives, editing.</p>
+      <p>this site is a real-time 3D model of my setup, running straight in your browser.</p>
+      <ul class="links">
+        <li>
+          <a href="#" target="_blank" rel="noopener">
+            <span class="lbl">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M4.265 3 3 6.36v13.054h4.471V22h2.519l2.514-2.586h3.773L21 14.318V3H4.265Zm15.058 10.477-2.93 2.937h-3.773l-2.515 2.586v-2.586H6.785V4.708h12.538v8.769ZM16.36 8.123h-1.696v4.952h1.696V8.123Zm-4.65 0h-1.696v4.952h1.696V8.123Z"/>
+              </svg>
+              twitch
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" rel="noopener">
+            <span class="lbl">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              twitter
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank" rel="noopener">
+            <span class="lbl">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path fill="currentColor" d="M6 7V6a6 6 0 1 1 12 0v1h2.5a1 1 0 0 1 1 .96l.95 12.04A2 2 0 0 1 20.46 22H3.54a2 2 0 0 1-1.99-2l.94-12.04A1 1 0 0 1 3.5 7H6Zm2 0h8V6a4 4 0 1 0-8 0v1Zm-2 4a1 1 0 1 0 0-.001A1 1 0 0 0 6 11Zm12 0a1 1 0 1 0 0-.001A1 1 0 0 0 18 11Z"/>
+              </svg>
+              buy
+            </span>
+          </a>
+        </li>
+      </ul>
+    </aside>
+  </main>
+
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "https://unpkg.com/three@0.165.0/build/three.module.js",
+      "three/addons/": "https://unpkg.com/three@0.165.0/examples/jsm/"
+    }
+  }
+  </script>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
